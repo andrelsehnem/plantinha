@@ -1,23 +1,19 @@
-import React, {useState} from "react";
-import {SafeAreaView, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import React from "react";
+import {
+    SafeAreaView, 
+    Text, 
+    Image, 
+    TouchableOpacity, 
+    Dimensions,
+    StyleSheet} from 'react-native';
+import { Feather } from '@expo/vector-icons'
 
 import wateringImg from '../assets/watering.png';
 import colors from "../styles/colors";
-import { Button } from "../components/button";
 
 //https://github.com/Lucxtor/PlantManager
+
 export function Welcome(){
-    const [visible, setVisible] = useState(false);
-
-    function handleVisibility(){
-        if (visible == false){
-            setVisible(true)
-        }else{
-            setVisible(false)
-        }
-        
-    }
-
     return(
         <SafeAreaView style= {styles.container}>
             <Text style={styles.title}>
@@ -25,18 +21,29 @@ export function Welcome(){
                 suas plantas {'\n'}
                 de forma fácil
             </Text>
-
             
-            <Image source={wateringImg} style = {styles.image} />
-            
+            <Image 
+            source={wateringImg} 
+            style = {styles.image} 
+            resizeMode="contain"
+            />
             
             <Text style={styles.subtitle}>
                 Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você sempre que precisar.
             </Text>
 
-            <Button title=">"/>            
-            
-            
+            <TouchableOpacity 
+                style={styles.button}
+                activeOpacity={0.7}
+            >
+                <Text style={styles.buttonIcon}>
+                    <Feather 
+                        name="chevron-right" 
+                        style = {styles.buttonIcon}
+                        />
+                </Text>
+            </TouchableOpacity>            
+ 
         </SafeAreaView>
     )
 }
@@ -46,7 +53,7 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-around'
     },
     title:{
         fontSize:32,
@@ -61,6 +68,9 @@ const styles = StyleSheet.create({
         paddingHorizontal:20,
         color: colors.heading,
     },
+    image:{
+        height: Dimensions.get('window').width * 0.7,
+    },
     button:{
         backgroundColor: colors.green,
         justifyContent:'center',
@@ -68,15 +78,15 @@ const styles = StyleSheet.create({
         borderRadius:16,
         marginBottom:10,
         height:56,
-        paddingHorizontal:10
-    },
-    image:{
-        width:292,
-        height:284,
+        width:56,
     },
     buttonText:{
         color: colors.white,
         fontSize: 24
+    },
+    buttonIcon:{
+        fontSize:32,
+        color: colors.white,
     }
 });
 
