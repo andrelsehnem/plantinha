@@ -10,13 +10,16 @@ import { Feather } from '@expo/vector-icons'
 
 import wateringImg from '../assets/watering.png';
 import colors from "../styles/colors";
+import fonts from "../styles/fonts";
 
 //https://github.com/Lucxtor/PlantManager
 
 export function Welcome(){
     return(
         <SafeAreaView style= {styles.container}>
-            <Text style={styles.title}>
+            <Text 
+                    style={styles.title}
+                    >
                 Gerencie {'\n'}
                 suas plantas {'\n'}
                 de forma fácil
@@ -56,11 +59,13 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     title:{
-        fontSize:32,
+        fontSize: 28,
         fontWeight: 'bold',
         textAlign: 'center',
         color: colors.heading,
-        marginTop:38
+        marginTop: 38,
+        fontFamily: fonts.heading,
+        lineHeight: 34
     },
     subtitle:{
         textAlign: 'center',
