@@ -7,6 +7,7 @@ import {
 } from '@expo-google-fonts/manrope';
 import { UserIdentification } from './src/pages/UserIdentification';
 import { Welcome } from './src/pages/Wecome';
+import { Confirmation } from './src/pages/Confirmation';
 
 
 export default function App(){
@@ -19,5 +20,5 @@ export default function App(){
   if(!fontsLoaded)
    return <AppLoading />
   else
-    return(<UserIdentification />)
+    return(<Confirmation />)
 }
