@@ -1,6 +1,5 @@
 export default {
-    heading: 'Jost_600SemiBold',
-    text: 'Jost_400Regular',
-    complement: 'Jost_400Regular' 
+    heading: 'Manrope_600SemiBold',
+    text: 'Manrope_400Regular',
+    complement: 'Manrope_400Regular' 
 };
-
