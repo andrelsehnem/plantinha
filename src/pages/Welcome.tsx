@@ -7,7 +7,9 @@ import {
     Dimensions,
     StyleSheet,
     View} from 'react-native';
-import { Feather } from '@expo/vector-icons'
+    
+import { Feather } from '@expo/vector-icons'; 
+
 
 import wateringImg from '../assets/watering.png';
 import colors from "../styles/colors";
