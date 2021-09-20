@@ -7,7 +7,7 @@ import {
   Manrope_600SemiBold,
 } from '@expo-google-fonts/manrope';
 
-import Routes from './src/routes'
+import Routes from './src/routes';
 
 import { UserIdentification } from './src/pages/UserIdentification';
 import { Welcome } from './src/pages/Welcome';
