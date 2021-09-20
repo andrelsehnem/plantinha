@@ -21,8 +21,9 @@ export default function App(){
     Manrope_600SemiBold
   });
 
-  if(!fontsLoaded)
+  if(!fontsLoaded){
    return <AppLoading />
+  }
   
     return(
     <Routes />
