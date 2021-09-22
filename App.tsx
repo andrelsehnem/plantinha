@@ -16,13 +16,13 @@ import { Confirmation } from './src/pages/Confirmation';
 
 export default function App(){
   
-  const fontsLoaded  = useFonts({
+  let [ fontsLoaded ]  = useFonts({
     Manrope_400Regular,
-    Manrope_600SemiBold
+    Manrope_600SemiBold,
   });
 
   if(!fontsLoaded){
-   return <AppLoading />
+   return null;
   }
   
     return(

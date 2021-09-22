@@ -12,6 +12,8 @@ const stackRoutes = createStackNavigator();
 const AppRoutes: React.FC = () => (
     <stackRoutes.Navigator 
         screenOptions={{
+            //headerMode="none"
+            headerShown: false,
             cardStyle: {
                 backgroundColor: colors.white
             }
