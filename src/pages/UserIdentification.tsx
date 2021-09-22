@@ -27,9 +27,11 @@ export function UserIdentification(){
     const navigation = useNavigation();
 
     function handleSubmit(){
-        
-        navigation.navigate('Confirmation');
-    }
+        navigation.navigate({
+            name: 'Confirmation'
+        }
+        )
+    };
 
     function handleInputBlur(){
         setIsFocused(false);
