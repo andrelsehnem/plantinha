@@ -33,13 +33,12 @@ export function Header(){
 
 const styles = StyleSheet.create({
     container:{
-        width: '100%',
+        width: '150%',
         flexDirection: 'row',
         justifyContent:'space-between',
         alignItems: 'center',
         paddingVertical: 20,
         marginTop: getStatusBarHeight(),
-        paddingHorizontal: 20,
     },
     greeting:{
         fontSize:32,
@@ -55,6 +54,7 @@ const styles = StyleSheet.create({
     image:{
         width: 70,
         height: 70,
+        
         borderRadius: 40,
     }
 })
