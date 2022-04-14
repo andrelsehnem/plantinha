@@ -25,7 +25,9 @@ export function EnviromentButton ({
 }: EnviromentButtonProps){
     return(
         <RectButton
-            style={styles.container}
+            style={{
+                styles.container
+            }}
             {...rest}
             >
                 <Text style={styles.text}>
